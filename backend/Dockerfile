@@ -1,4 +1,4 @@
-FROM php:8.2-cli
+FROM php:8.4-cli
 
 # Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
@@ -26,7 +26,7 @@ RUN composer install --no-dev --optimize-autoloader --no-scripts --ignore-platfo
 COPY . .
 
 # Re-run composer scripts after full copy
-RUN composer dump-autoload --optimize
+RUN composer dump-autoload --optimize --ignore-platform-reqs
 
 # Create SQLite database directory and file
 RUN mkdir -p /data && touch /data/database.sqlite
