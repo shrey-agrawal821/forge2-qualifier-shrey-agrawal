@@ -1,0 +1,6 @@
+{
+  "provider": "php",
+  "php": {
+    "version": "8.2"
+  }
+}
