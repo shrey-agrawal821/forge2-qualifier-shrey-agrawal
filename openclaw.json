@@ -1,0 +1,15 @@
+{
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "mode": "socket",
+      "appToken": "SLACK_APP_TOKEN",
+      "botToken": "SLACK_BOT_TOKEN",
+      "allowlist": ["#sprint-main", "#agent-coder", "#agent-log"]
+    }
+  },
+  "model": {
+    "provider": "groq",
+    "model": "llama-3.3-70b-versatile"
+  }
+}
